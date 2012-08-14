@@ -23,6 +23,7 @@ public:
 	void dragEvent(ofDragInfo dragInfo);
 	void gotMessage(ofMessage msg);
 	
+	/*-----ofxCDM objects----*/
 	void cmdEvent(ofxCDMEvent &ev);
 	ofxClickDownMenu Menu;
 

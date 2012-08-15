@@ -65,6 +65,7 @@ public:
 	bool isChild;
 	ofxClickDownMenu *parent;
 	
+	bool Enable;
 	bool useFont;
 	bool OnlyRightClick;
 	

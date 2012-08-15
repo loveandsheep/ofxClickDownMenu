@@ -26,6 +26,7 @@ ofxClickDownMenu::ofxClickDownMenu(){
 	isChild = false;
 	hilight.setHsb(235, 255, 255,180);
 	focus_y = 1;
+	Enable = true;
 }
 
 ofxClickDownMenu::~ofxClickDownMenu(){
@@ -113,6 +114,8 @@ void ofxClickDownMenu::draw(){
 	
 	if (haveChild) child->draw();
 	if (haveFChild)fchild->draw();
+	ofEnableBlendMode(OF_BLENDMODE_ALPHA);
+	ofSetRectMode(OF_RECTMODE_CORNER);
 }
 
 void ofxClickDownMenu::mousePressed(ofMouseEventArgs &mouse){
@@ -120,7 +123,7 @@ void ofxClickDownMenu::mousePressed(ofMouseEventArgs &mouse){
 	if (haveChild) return;
 	if (haveFChild)return;
 	if (phase == PHASE_SELECT) return;
-	if (phase == PHASE_WAIT){
+	if ((phase == PHASE_WAIT)&&(Enable)){
 		if (((mouse.button == 2)&&(OnlyRightClick))||(!OnlyRightClick)) {
 			openMenu(mouse.x,mouse.y);
 		}

@@ -224,6 +224,21 @@ void ofxClickDownMenu::RegisterFader(string Menu, float *valueP){
 
 }
 
+void ofxClickDownMenu::UnRegisterMenu(string Menu){
+	int cnt = 0;
+	while (cnt < menus.size()) {
+		if (Menu == menus[cnt].message){
+			menus.erase(menus.begin()+cnt);
+		}else{
+			cnt++;
+		}
+	}
+	window_size.y = menus.size()*20;
+	for (int i = 0;i < menus.size();i++){
+		window_size.x = MAX(menus[i].message.length()*9,window_size.x);
+	}
+}
+
 void ofxClickDownMenu::doFunction(){
 	if (menus[menu_focused].isBranch){
 		// Gen Branch menu

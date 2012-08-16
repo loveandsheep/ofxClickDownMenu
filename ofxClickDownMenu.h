@@ -41,7 +41,7 @@ public:
 	void RegisterMenu(string Menu);
 	void RegisterBranch(string Menu,vector<string> *Menus);
 	void RegisterFader(string Menu,float *valueP);
-	
+	void UnRegisterMenu(string Menu);
 	
 	void openMenu(int x,int y);
 	void doFunction();

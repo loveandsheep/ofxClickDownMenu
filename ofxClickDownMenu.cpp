@@ -39,7 +39,7 @@ void ofxClickDownMenu::draw(){
 	if (phase == PHASE_CLICK){
 		frame += 1 * 90.0f / ofGetFrameRate();
 		window_y += (window_size.y - window_y) / 5.0 * 120.0f / ofGetFrameRate();
-		
+		window_y = MIN(window_size.y,window_y);
 		ofSetColor(255, 255, 255,140);
 		ofNoFill();
 		ofRect(window_pos,window_size.x,window_y);

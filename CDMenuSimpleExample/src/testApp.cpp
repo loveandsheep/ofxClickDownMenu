@@ -49,7 +49,6 @@ void testApp::draw(){
 	ofDrawBitmapString("Click & open Menu Dialog.", 30,30);
 	
 	/*-------------Draw Menu-------------*/
-	Menu.draw();
 	
 	col.a = 255 * brightness; 
 	ofSetColor(col);
@@ -73,6 +72,8 @@ void testApp::draw(){
 		default:
 			break;
 	}
+	Menu.draw();
+	
 }
 
 //--------------------------------------------------------------

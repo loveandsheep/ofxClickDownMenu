@@ -19,7 +19,7 @@ ofxClickDownFader::ofxClickDownFader(float* val,ofPoint pos){
 	window_pos = pos+ofPoint(1,0);
 	window_size = ofPoint(256,60);
 	window_y = 0;
-	fader_name = "Test Fader";
+	fader_name = "*Float Fader*";
 	okc = "Cancel   OK";
 	hilight.setHsb(235, 255, 255,180);
 	

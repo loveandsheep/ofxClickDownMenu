@@ -35,7 +35,6 @@ ofxClickDownMenu::~ofxClickDownMenu(){
 }
 
 void ofxClickDownMenu::draw(){
-    glDisable(GL_DEPTH_TEST);
 	ofEnableBlendMode(OF_BLENDMODE_ALPHA);
 	if (phase == PHASE_CLICK){
 		frame += 1 * 90.0f / ofGetFrameRate();
@@ -45,8 +44,7 @@ void ofxClickDownMenu::draw(){
 		ofNoFill();
 		ofRect(window_pos,window_size.x,window_y);
 		ofFill();
-        ofEnableBlendMode(OF_BLENDMODE_ALPHA);
-		ofSetColor(0, 0, 0,255);
+		ofSetColor(0, 0, 0,100);
 		ofRect(window_pos,window_size.x,window_y);
 		
 		for (int i = 0;i < menus.size();i++){
